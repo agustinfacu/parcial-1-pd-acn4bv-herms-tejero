@@ -1,38 +1,40 @@
 // api para obtener informacion de servicios
 const API_URL = "https://jsonblob.com/api/jsonBlob/1420033092164444160";
 const servicios = [];
+const categorias = [];
 
+// funcion para cargar los datos de la api
 const cargarData = async () => {
   const response = await fetch(API_URL);
   if(response.status === 200) {
       const data = await response.json();
+      const categoriasData = data.productos.categorias;
+      categorias.push(...categoriasData);
+     console.log("data ", categorias[0]);
       servicios.push(...data.productos.servicios);
     imprimir();
   }
-  console.log("data ", servicios);
+ // console.log("data ", servicios);
   
 };
 
+// llamo a la funcion para cargar los datos
 cargarData();
 
-//  <article class="product" aria-labelledby="p1">
-//           <img src="https://images.unsplash.com/photo-1549388604-817d15aa0110?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Impresora industrial">
-//           <div class="body">
-//             <div style="display:flex;justify-content:space-between;align-items:start">
-//               <div>
-//                 <h4 id="p1" style="margin:0;font-size:16px;font-weight:700">Impresión Simple Faz</h4>
-//                 <div style="color:var(--muted);font-size:13px;margin-top:6px">Copias en blanco y negro o color, cara simple</div>
-//               </div>
-//               <div style="margin-left:8px"><span class="price-pill">Desde $50</span></div>
-//             </div>
-
-//             <div class="actions" style="margin-top:6px">
-//               <button aria-label="Cotizar Impresión Simple Faz">Cotizar</button>
-//             </div>
-//           </div>
-//         </article>
-
+// funcion para imprimir los productos en el html
 const imprimir = () => {
+
+
+  // agrego todos los filtros de categorias que vienen en la api
+  const filtros = document.querySelector(".filters");
+  categorias.forEach((cat) =>{
+    filtros.innerHTML += `
+    
+    <button class="chip ${cat.id === 0 ? 'active' : ''}" role="tab" aria-selected="true">${cat.label}</button>
+    
+    `
+  })
+
   const contenedor = document.getElementById("productos");
 
   servicios.forEach((prod) => {
