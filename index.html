@@ -150,96 +150,9 @@
         <button class="chip" role="tab">Libros</button>
       </div>
 
-      <div class="products-grid" aria-live="polite">
+      <div class="products-grid" id="productos" aria-live="polite">
         <!-- Product 1 -->
-        <article class="product" aria-labelledby="p1">
-          <img src="https://images.unsplash.com/photo-1549388604-817d15aa0110?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Impresora industrial">
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:start">
-              <div>
-                <h4 id="p1" style="margin:0;font-size:16px;font-weight:700">Impresión Simple Faz</h4>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px">Copias en blanco y negro o color, cara simple</div>
-              </div>
-              <div style="margin-left:8px"><span class="price-pill">Desde $50</span></div>
-            </div>
-
-            <div class="actions" style="margin-top:6px">
-              <button aria-label="Cotizar Impresión Simple Faz">Cotizar</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 2 -->
-        <article class="product" aria-labelledby="p2">
-          <img src="https://images.unsplash.com/photo-1503602642458-232111445657?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Impresión doble faz">
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:start">
-              <div>
-                <h4 id="p2" style="margin:0;font-size:16px;font-weight:700">Impresión Doble Faz</h4>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px">Copias en ambas caras, ahorro de papel</div>
-              </div>
-              <div style="margin-left:8px"><span class="price-pill">Desde $75</span></div>
-            </div>
-
-            <div class="actions" style="margin-top:6px">
-              <button aria-label="Cotizar Impresión Doble Faz">Cotizar</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 3 -->
-        <article class="product" aria-labelledby="p3">
-          <img src="https://images.unsplash.com/photo-1542736667-069246bdbc6d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Encuadernación premium">
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:start">
-              <div>
-                <h4 id="p3" style="margin:0;font-size:16px;font-weight:700">Encuadernación Premium</h4>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px">Encuadernado profesional con tapa dura</div>
-              </div>
-              <div style="margin-left:8px"><span class="price-pill">Desde $300</span></div>
-            </div>
-
-            <div class="actions" style="margin-top:6px">
-              <button aria-label="Cotizar Encuadernación Premium">Cotizar</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 4 -->
-        <article class="product" aria-labelledby="p4">
-          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Anillado espiral">
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:start">
-              <div>
-                <h4 id="p4" style="margin:0;font-size:16px;font-weight:700">Anillado Espiral</h4>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px">Anillado con espiral metálico o plástico</div>
-              </div>
-              <div style="margin-left:8px"><span class="price-pill">Desde $150</span></div>
-            </div>
-
-            <div class="actions" style="margin-top:6px">
-              <button aria-label="Cotizar Anillado Espiral">Cotizar</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Product 5 (example) -->
-        <article class="product" aria-labelledby="p5">
-          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=..." alt="Libros personalizados">
-          <div class="body">
-            <div style="display:flex;justify-content:space-between;align-items:start">
-              <div>
-                <h4 id="p5" style="margin:0;font-size:16px;font-weight:700">Libros Personalizados</h4>
-                <div style="color:var(--muted);font-size:13px;margin-top:6px">Impresión de libros con diseño personalizado</div>
-              </div>
-              <div style="margin-left:8px"><span class="price-pill">Desde $500</span></div>
-            </div>
-
-            <div class="actions" style="margin-top:6px">
-              <button aria-label="Cotizar Libros Personalizados">Cotizar</button>
-            </div>
-          </div>
-        </article>
+        
 
       </div>
     </section>
@@ -286,5 +199,6 @@
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white"><path d="M21 12a9 9 0 1 1-4.5-7.5L21 3v9z" stroke-width="1.4"/></svg>
   </div>
 
+    <script src="js/api.js"></script>
 </body>
 </html>

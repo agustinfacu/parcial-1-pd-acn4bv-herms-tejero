@@ -35,7 +35,7 @@
       color:var(--brown-900);
       font-size:14px;
     }
-    .topbar .wrap{display:flex;align-items:center;justify-content:space-between}
+    .topbar .wrap{display:flex;align-items:center;justify-content:space-between; justify-content: center;}
     .topbar .left, .topbar .right{display:flex;gap:14px;align-items:center}
     .topbar svg{width:16px;height:16px;opacity:.9}
 
