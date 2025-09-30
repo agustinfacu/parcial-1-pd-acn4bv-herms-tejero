@@ -1,32 +1,31 @@
 // api para obtener informacion de servicios
 const API_URL = "https://jsonblob.com/api/jsonBlob/1420033092164444160";
-const servicios = [];
-const categorias = [];
+const servicios = []; // array para guardar servicios  
+const categorias = []; // array para guardar categorias
 
-// funcion para cargar los datos de la api
+// funcion para cargar los datos de la api en los arrays
 const cargarData = async () => {
   const response = await fetch(API_URL);
+  // uso el condicional para verificar que la respuesta sea correcta
   if(response.status === 200) {
       const data = await response.json();
       const categoriasData = data.productos.categorias;
       categorias.push(...categoriasData);
      console.log("data ", categorias[0]);
-      servicios.push(...data.productos.servicios);
+      servicios.push(...data.productos.servicios); 
     imprimir();
   }
- // console.log("data ", servicios);
   
 };
 
 // llamo a la funcion para cargar los datos
 cargarData();
 
-// funcion para imprimir los productos en el html
+// funcion para imprimir los productos en el html haciendo uso del DOM
 const imprimir = () => {
-
-
   // agrego todos los filtros de categorias que vienen en la api
   const filtros = document.querySelector(".filters");
+  // recorro el array de categorias con un forEach
   categorias.forEach((cat) =>{
     filtros.innerHTML += `
     

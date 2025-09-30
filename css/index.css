@@ -59,8 +59,49 @@
     .brand h1{margin:0;font-family:"Montserrat";font-weight:700;font-size:18px}
     .brand p{margin:0;font-size:13px;opacity:.95}
 
-    .hamburger{margin-left:auto;cursor:pointer}
+    .hamburger{margin-left:auto;cursor:pointer; background:transparent; padding:5px;}
 
+    /* 
+      menu hamburguesa / inicio de sesión
+    */
+
+    /* Estilos del sidebar */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: var(--brown-700);
+      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+      padding: 20px;
+      /* margin: 10px; */
+      transform: translateX(100%); /* oculto a la derecha */
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    /* cuando se activa el evento se muestra */
+    .sidebar.active {
+      transform: translateX(0);     
+    }
+
+    
+    /* Botón hamburguesa */
+    .hamburger {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1100; /* por encima del menú */
+      position: fixed;
+      /* top: 60px; */
+      right: 20px;
+    }
+/* /////////////////////////////////////// */
     /* Hero */
     .hero{
       text-align:center;padding:48px 18px 56px;
