@@ -306,3 +306,43 @@
       .hero{padding:28px 18px}
       .topbar .wrap{flex-direction:column;gap:6px;align-items:flex-start}
     }
+    /* Chip de usuario logueado en el header */
+      .user-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.25);
+        padding: 6px 10px;
+        border-radius: 999px;
+        color: #fff;
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .user-chip .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        background: #999;
+      }
+      .user-chip .dot.online { background: var(--green); }
+
+      /* Menú autenticado dentro del sidebar */
+      #auth-menu .menu-item {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255,255,255,.15);
+        margin-bottom: 8px;
+        background: rgba(255,255,255,.06);
+      }
+      #auth-menu .menu-item:hover { background: rgba(255,255,255,.12); }
+      #auth-menu .sep {
+        border: none;
+        border-top: 1px solid rgba(255,255,255,.15);
+        margin: 10px 0;
+      }
+
