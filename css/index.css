@@ -345,4 +345,39 @@
         border-top: 1px solid rgba(255,255,255,.15);
         margin: 10px 0;
       }
-
+/* Chip de usuario (centrado y alineado al header) */
+    .user-chip{
+      display: inline-flex;
+      align-items: center;          /* centra verticalmente dot + email */
+      justify-content: center;      /* centra horizontalmente dentro del chip */
+      gap: 8px;
+      height: 44px;                 /* mismo alto que el botón hamburguesa */
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1;               /* evita desalineación del texto */
+      align-self: center;           /* centra el chip respecto al header */
+    }
+    .user-chip .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      background: #999;
+    }
+    .user-chip .dot.online{ background: var(--green); }
+    
+/* Layout del header: 3 columnas (marca | chip centrado | hamburguesa) */
+    .header-bar{
+      display: grid !important;
+      grid-template-columns: 1fr auto 1fr; /* tres columnas iguales en ancho de fr */
+      align-items: center;
+      gap: 18px;
+    }
+    .header-bar .brand{ justify-self: start; }
+    .header-bar #user-chip{ justify-self: center; }
+    .header-bar #menu-toggle{ justify-self: end; }

@@ -112,7 +112,7 @@ btnToggle?.addEventListener("click", () =>
   sidebar.classList.contains("active") ? closeMenu() : openMenu()
 );
 btnClose?.addEventListener("click", closeMenu);
-overlay?.addEventListener("click", closeMenu); // cerrar al click afuera
+overlay?.addEventListener("click", closeMenu); 
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && sidebar.classList.contains("active")) {
     closeMenu();
@@ -157,7 +157,7 @@ panelRegister?.addEventListener("submit", (e) => {
   closeMenu();
 });
 
-// Google mock (login/registro usan el mismo flujo)
+// Google mock
 function googleMockLogin() {
   const u = new Usuario("Google User", "google.user@example.com");
   AuthManager.guardar(u);
@@ -177,6 +177,6 @@ logoutBtn?.addEventListener("click", () => {
 
 // Inicializar estado al cargar
 document.addEventListener("DOMContentLoaded", () => {
-  setAria(false);   // estado inicial accesible
-  refreshAuthUI();  // sincronizar UI con lo que haya en localStorage
+  setAria(false);   
+  refreshAuthUI();  
 });
