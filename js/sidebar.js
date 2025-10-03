@@ -29,3 +29,38 @@ btnToggle?.addEventListener("click", () => {
 });
 
 btnClose?.addEventListener("click", closeMenu);
+// ==== Tabs: alternar entre Login y Registro ====
+
+// Elementos de tabs y paneles
+const tabLogin = document.getElementById("tab-login");
+const tabRegister = document.getElementById("tab-register");
+const panelLogin = document.getElementById("form-login");
+const panelRegister = document.getElementById("form-register");
+
+// Función para activar una pestaña y su panel
+function activarTab(tipo) {
+  const esLogin = tipo === "login";
+
+  // Marcar visualmente la pestaña activa
+  tabLogin?.classList.toggle("active", esLogin);
+  tabRegister?.classList.toggle("active", !esLogin);
+
+  // ARIA: cuál está seleccionada
+  tabLogin?.setAttribute("aria-selected", String(esLogin));
+  tabRegister?.setAttribute("aria-selected", String(!esLogin));
+
+  // Mostrar/ocultar paneles con hidden + clase
+  panelLogin.hidden = !esLogin;
+  panelRegister.hidden = esLogin;
+  panelLogin.classList.toggle("active", esLogin);
+  panelRegister.classList.toggle("active", !esLogin);
+
+  // Enfocar el primer input del panel activo
+  const primerInput = (esLogin ? panelLogin : panelRegister).querySelector("input");
+  primerInput?.focus();
+}
+
+// Listeners de click en las tabs
+tabLogin?.addEventListener("click", () => activarTab("login"));
+tabRegister?.addEventListener("click", () => activarTab("register"));
+
