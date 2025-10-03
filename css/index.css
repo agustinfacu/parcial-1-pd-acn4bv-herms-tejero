@@ -59,48 +59,147 @@
     .brand h1{margin:0;font-family:"Montserrat";font-weight:700;font-size:18px}
     .brand p{margin:0;font-size:13px;opacity:.95}
 
-    .hamburger{margin-left:auto;cursor:pointer; background:transparent; padding:5px;}
+    /*Boton hamburguesa*/
+    .hamburger{
+      margin-left: auto;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 12px;               /* 🔵 bordes redondeados */
+      padding: 6px 8px;
+      display: inline-flex;              /* centra el ícono */
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;                   /* 🔵 objetivo táctil recomendado */
+      min-height: 44px;                  /* 🔵 objetivo táctil recomendado */
+      transition: background .2s ease, box-shadow .2s ease, transform .06s ease;
+    }
 
-    /* 
-      menu hamburguesa / inicio de sesión
-    */
+    .hamburger:hover{
+      background: rgba(255,255,255,.10);
+    }
 
-    /* Estilos del sidebar */
+    .hamburger:active{
+      transform: scale(0.98);
+    }
+
+    .hamburger:focus-visible{
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+      border-radius: 12px;
+    }
+
+    /* ===== Sidebar ===== */
+
+    /* Fondo semitransparente al abrir el panel */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(1px);
+      z-index: 900;
+    }
+
+    /* Panel lateral (sidebar) */
     .sidebar {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 16px;
       position: fixed;
       top: 0;
       right: 0;
-      width: 300px;
+      width: min(92vw, 360px);
       height: 100%;
       background: var(--brown-700);
-      box-shadow: -2px 0 5px rgba(0,0,0,0.3);
-      padding: 20px;
-      /* margin: 10px; */
-      transform: translateX(100%); /* oculto a la derecha */
-      transition: transform 0.3s ease;
+      color: #fff;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.28);
+      padding: 18px;
+      transform: translateX(100%); /* oculto por defecto */
+      transition: transform .28s ease;
       z-index: 1000;
     }
+    .sidebar.active { transform: translateX(0); }
 
-    /* cuando se activa el evento se muestra */
-    .sidebar.active {
-      transform: translateX(0);     
+    /* Cabecera del panel (título + botón cerrar) */
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    
-    /* Botón hamburguesa */
-    .hamburger {
-      font-size: 24px;
-      background: none;
-      border: none;
+    .sidebar-close {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      font-size: 28px;
       cursor: pointer;
-      z-index: 1100; /* por encima del menú */
-      position: fixed;
-      /* top: 60px; */
-      right: 20px;
+      line-height: 1;
     }
+
+    /* Tabs de Login/Registro */
+    .tabs { display: flex; gap: 8px; }
+    .tab {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .tab.active {
+      background: #fff;
+      color: var(--brown-700);
+    }
+
+    /* Paneles (formularios) */
+    .panel { display: grid; gap: 10px; }
+    .panel[hidden] { display: none; }
+
+    /* Inputs del panel */
+    .sidebar input {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.96);
+      color: #222;
+    }
+
+    /* Botones de ancho completo dentro del sidebar */
+    .btn.full { width: 100%; justify-content: center; }
+    .or { text-align: center; opacity: .85; font-weight: 700; }
+
+    /* Accesibilidad: resalte al navegar con teclado */
+    .sidebar button:focus-visible,
+    .sidebar input:focus-visible,
+    .sidebar a:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+      border-radius: 10px;
+    }
+
+    /* Bloquear scroll del body cuando está abierto el panel */
+    body.no-scroll { overflow: hidden; }
+    .sidebar #login-google,
+
+    .sidebar #register-google {
+      background: var(--orange);
+      color: #fff;
+      border: 2px solid transparent;      /* quitar borde tenue del outline */
+      box-shadow: 0 6px 0 rgba(0,0,0,0.06);
+    }
+
+    .sidebar #login-google:hover,
+    .sidebar #register-google:hover {
+      background: var(--orange-dark);
+    }
+
+    /* Asegurar que el ícono siga el color del texto */
+    .sidebar #login-google svg,
+    .sidebar #register-google svg {
+      stroke: currentColor;
+    }
+    
 /* /////////////////////////////////////// */
     /* Hero */
     .hero{
