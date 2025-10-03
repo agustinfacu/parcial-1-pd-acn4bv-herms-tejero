@@ -43,7 +43,12 @@
         <p>Servicios de Impresión Profesional</p>
       </div>
     </div>
-
+    <!-- Chip de usuario logueado -->
+    <div id="user-chip" class="user-chip" hidden>
+      <span class="dot online" aria-label="Conectado" title="Conectado"></span>
+      <span id="user-chip-email">usuario@example.com</span>
+    </div>
+    <!--Menu hamburguesa-->
     <button class="hamburger" id="menu-toggle"
             aria-expanded="false"
             aria-controls="sidebar"
@@ -125,6 +130,16 @@
             </span>
           </button>
         </form>
+        <!-- Menú visible solo si hay sesión -->
+        <nav id="auth-menu" class="panel" role="menu" hidden>
+          <a href="#" class="menu-item" role="menuitem">Dashboard personal</a>
+          <a href="#" class="menu-item" role="menuitem">Encargar pedido nuevo</a>
+          <a href="#" class="menu-item" role="menuitem">Pagos y facturas</a>
+          <a href="#" class="menu-item" role="menuitem">Mis Datos</a>
+          <a href="#" class="menu-item" role="menuitem">Inicio</a>
+          <hr class="sep"/>
+          <button id="logout-btn" class="btn outline full" role="menuitem">Cerrar sesión</button>
+        </nav>
       </aside>
   </div>
 </header>
