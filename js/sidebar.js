@@ -62,14 +62,21 @@ function activarTab(tipo) {
   tabLogin?.setAttribute("aria-selected", String(esLogin));
   tabRegister?.setAttribute("aria-selected", String(!esLogin));
 
+  // Mostrar/ocultar por atributos
   panelLogin.hidden    = !esLogin;
   panelRegister.hidden =  esLogin;
 
+  // Clases visuales
   panelLogin.classList.toggle("active", esLogin);
   panelRegister.classList.toggle("active", !esLogin);
 
+  // 🔧 También forzamos el display inline (evita quedarse en 'none')
+  panelLogin.style.display    = esLogin ? "" : "none";
+  panelRegister.style.display = esLogin ? "none" : "";
+
   (esLogin ? panelLogin : panelRegister).querySelector("input")?.focus();
 }
+
 
 // ==============================
 // Refrescar UI según sesión
@@ -83,25 +90,48 @@ function refreshAuthUI() {
     userChip?.removeAttribute("hidden");
     if (userChipEmail) userChipEmail.textContent = u.email;
 
-    // Sidebar: ocultar tabs/forms; mostrar menú autenticado
-    tabsContainer?.setAttribute("hidden", "");
+    // Sidebar: ocultar tabs y ambos formularios
+    if (tabsContainer) {
+      tabsContainer.setAttribute("hidden", "");
+      tabsContainer.style.display = "none";
+    }
+
     panelLogin.hidden = true;
     panelRegister.hidden = true;
-    authMenu?.removeAttribute("hidden");
+    panelLogin.classList.remove("active");
+    panelRegister.classList.remove("active");
+    panelLogin.style.display = "none";
+    panelRegister.style.display = "none";
+
+    // Mostrar menú autenticado
+    if (authMenu) {
+      authMenu.removeAttribute("hidden");
+      authMenu.style.display = "block";
+    }
 
     if (title) title.textContent = `Hola, ${u.nombre}`;
   } else {
     // Header: ocultar chip
     userChip?.setAttribute("hidden", "");
 
-    // Sidebar: mostrar tabs + login por defecto; ocultar menú
-    tabsContainer?.removeAttribute("hidden");
-    authMenu?.setAttribute("hidden", "");
+    // Sidebar: mostrar tabs y login por defecto; ocultar menú autenticado
+    if (tabsContainer) {
+      tabsContainer.removeAttribute("hidden");
+      tabsContainer.style.display = ""; // vuelve al valor por defecto (flex por tus estilos)
+    }
+
+    if (authMenu) {
+      authMenu.setAttribute("hidden", "");
+      authMenu.style.display = "none";
+    }
+
+    // Aseguramos que el login quede visible y el registro oculto
     activarTab("login");
 
     if (title) title.textContent = "Tu cuenta";
   }
 }
+
 
 // ==============================
 // Listeners

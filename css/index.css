@@ -370,7 +370,7 @@
       background: #999;
     }
     .user-chip .dot.online{ background: var(--green); }
-    
+
 /* Layout del header: 3 columnas (marca | chip centrado | hamburguesa) */
     .header-bar{
       display: grid !important;
@@ -381,3 +381,54 @@
     .header-bar .brand{ justify-self: start; }
     .header-bar #user-chip{ justify-self: center; }
     .header-bar #menu-toggle{ justify-self: end; }
+    
+[hidden] { display: none !important; }
+
+.logout-btn{
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: #ffe2e2;                          /* texto claro sobre fondo rojo */
+  background: rgba(220,38,38,.12);          /* rojo suave translúcido */
+  border: 1px solid rgba(220,38,38,.45);
+  box-shadow: 0 4px 0 rgba(0,0,0,.05);
+  transition: background .2s ease, transform .06s ease, border-color .2s ease, box-shadow .2s ease;
+  background-color: #c18505;
+}
+
+.logout-btn:hover{
+  background: rgba(220,38,38,.22);
+  border-color: rgba(220,38,38,.65);
+}
+
+.logout-btn:active{
+  transform: translateY(1px);
+  box-shadow: 0 2px 0 rgba(0,0,0,.04);
+}
+
+.logout-btn:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  border-radius: 12px;
+}
+/* Layout por defecto: hay chip */
+.header-bar{
+  display:grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items:center;
+  gap:18px;
+}
+.header-bar .brand{ justify-self:start; }
+.header-bar #user-chip{ justify-self:center; }
+.header-bar #menu-toggle{ justify-self:end; }
+
+/* Si el chip está oculto => colapsar a 2 columnas (brand | hamburguesa) */
+.header-bar:has(#user-chip[hidden]) {
+  grid-template-columns: 1fr auto;
+}
