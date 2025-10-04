@@ -345,14 +345,19 @@
     <section class="wrap" aria-labelledby="productos-title">
       <h2 id="productos-title" class="section-title">Nuestros Productos y Servicios</h2>
 
-      <div class="filters" role="tablist" aria-label="Categorias">
-     
+      <div class="filters" role="tablist" aria-label="Categorias"></div>
+
+      <!-- Contenedor con scroll interno y tamaño controlado -->
+      <div class="products-box" id="productos-box" data-page-size="6" aria-describedby="productos-status">
+        <div class="products-grid" id="productos" aria-live="polite">
+          <!-- acá van los productos y servicios -->
+        </div>
       </div>
 
-      <div class="products-grid" id="productos" aria-live="polite">
-        <!-- acá van los productos y servicios -->
-        
+      <p id="productos-status" class="visually-hidden" aria-live="polite">Mostrando productos…</p>
 
+      <div class="products-actions">
+        <button id="btn-productos-mas" class="btn-more" aria-controls="productos">Mostrar más</button>
       </div>
     </section>
 </main>
@@ -396,7 +401,7 @@
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white"><path d="M21 12a9 9 0 1 1-4.5-7.5L21 3v9z" stroke-width="1.4"/></svg>
   </div>
 
-    <script src="js/api.js"></script>
+    <script src="js/productos.api.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
     <script src="js/noticias.js"></script>
