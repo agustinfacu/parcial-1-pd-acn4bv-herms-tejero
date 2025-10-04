@@ -322,3 +322,64 @@ footer{
   .hero{ padding:28px 18px; }
   .topbar .wrap{ flex-direction:column; gap:6px; align-items:flex-start; }
 }
+/* Chips (Recientes/Todas/Categorías)  */
+.chips-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
+  flex-wrap:wrap;
+}
+
+/* Dropdown de categorías */
+.dropdown{ position:relative; }
+.dropdown-menu{
+  position:absolute;
+  top:110%;
+  left:50%;
+  transform:translateX(-50%);
+  min-width:220px;
+  background:#fff;
+  color:#222;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:12px;
+  box-shadow:0 10px 24px rgba(0,0,0,.08);
+  padding:6px;
+  z-index:5;
+}
+.cat-item{
+  width:100%;
+  text-align:left;
+  padding:10px 12px;
+  border-radius:10px;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  font-weight:600;
+}
+.cat-item[aria-checked="true"]{ background:rgba(0,0,0,.06); }
+.cat-item:hover{ background:rgba(0,0,0,.08); }
+
+/* Contenedor de noticias con scroll  */
+.news-box{
+  max-width:900px;
+  margin:0 auto;
+  padding:12px;
+  background:#fff;
+  border:1px solid rgba(155,64,16,.06);
+  border-radius:12px;
+  box-shadow:0 6px 14px rgba(18,18,18,.03);
+  max-height:640px;            /* ~4 cards aprox. */
+  overflow:auto;               /* scroll interno */
+}
+
+/* La lista adentro del contenedor */
+.news-list{
+  display:grid;
+  gap:14px;
+}
+
+/* Botón Mostrar más */
+.news-actions{ text-align:center; margin-top:12px; }
+.btn.small{ padding:10px 14px; font-size:14px; }

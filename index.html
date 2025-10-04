@@ -145,7 +145,7 @@
 
 
   <!-- HERO -->
-  <main>
+<main>
     <section class="hero wrap" aria-labelledby="hero-title">
       <h2 id="hero-title">Impresión<br/><strong>Profesional</strong></h2>
       <h3>Al alcance de un clic</h3>
@@ -189,21 +189,43 @@
     </section>
 
     <!-- Noticias -->
-    <section aria-labelledby="noticias" class="wrap">
-      <h2 id="noticias" class="section-title">Noticias, Descuentos y Novedades</h2>
+  <section aria-labelledby="noticias" class="wrap">
+    <h2 id="noticias" class="section-title">Noticias, Descuentos y Novedades</h2>
 
-      <div style="display:flex;justify-content:center;gap:10px;margin-bottom:12px">
-        <button id="btn-news-recientes" class="chip active">Recientes</button>
-        <button id="btn-news-todas" class="chip">Todas</button>
+    <!-- Filtros: Recientes / Todas + Categorías -->
+    <div class="chips-row">
+      <button id="btn-news-recientes" class="chip active">Recientes</button>
+      <button id="btn-news-todas" class="chip">Todas</button>
+
+      <div class="dropdown">
+        <button id="btn-news-categorias" class="chip" aria-haspopup="true" aria-expanded="false">
+          Categorías ▾
+        </button>
+        <div id="cat-menu" class="dropdown-menu" role="menu" hidden>
+          <button class="cat-item" role="menuitemradio" data-cat="todas" aria-checked="true">Todas</button>
+          <button class="cat-item" role="menuitemradio" data-cat="fotocopias">Fotocopias</button>
+          <button class="cat-item" role="menuitemradio" data-cat="encuadernados">Encuadernados</button>
+          <button class="cat-item" role="menuitemradio" data-cat="anillados">Anillados</button>
+          <button class="cat-item" role="menuitemradio" data-cat="envios">Envíos</button>
+          <button class="cat-item" role="menuitemradio" data-cat="copias a color">Copias a color</button>
+          <button class="cat-item" role="menuitemradio" data-cat="varias">Varias</button>
+        </div>
       </div>
-
+    </div>
+    <div class="news-box">
       <div class="news-list">
-        <div class="promo" role="article" aria-label="Oferta especial">
+        <!-- Promo 1 -->
+        <div class="promo" role="article" aria-label="Oferta especial"
+            data-discount="20" data-cats="varias">
           <div class="left">
             <div style="display:flex;align-items:center;gap:8px;font-weight:700">⚡ Oferta Especial</div>
             <div style="font-weight:800;font-size:18px;margin-top:4px">¡20% de descuento en tu primer pedido!</div>
             <div style="color:#4b4b4b;margin-top:6px">Válido para nuevos clientes en servicios de impresión</div>
             <div style="margin-top:6px;color:#b37b00">★★★★★ &nbsp; +1000 clientes satisfechos</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+              <time datetime="2025-01-23">23 de enero de 2025</time>
+            </div>
           </div>
           <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
             <a class="cta-mini" href="#descuento">Obtener Descuento</a>
@@ -211,7 +233,27 @@
           </div>
         </div>
 
-        <article class="news-card" aria-labelledby="n1">
+        <!-- Promo 2 -->
+        <div class="promo" role="article" aria-label="Copias a color 30% OFF"
+            data-discount="30" data-cats="copias a color">
+          <div class="left">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:700">🎉 ¡Super Promo!</div>
+            <div style="font-weight:800;font-size:18px;margin-top:4px">30% OFF en Copias a Color</div>
+            <div style="color:#4b4b4b;margin-top:6px">Aplica en tiradas desde 50 copias</div>
+            <div style="margin-top:6px;color:#b37b00">★★★★★ &nbsp; Calidad fotográfica</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+              <time datetime="2025-01-21">21 de enero de 2025</time>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+            <a class="cta-mini" href="#descuento-color">Aprovechar</a>
+            <div style="font-size:12px;color:#6b6b6b">Válido todo el mes</div>
+          </div>
+        </div>
+
+        <!-- Noticia 1 -->
+        <article class="news-card" aria-labelledby="n1" data-cats="encuadernados">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <h3 id="n1" style="margin:0;font-size:16px">Nuevos Servicios de Encuadernación Premium</h3>
             <span class="badge-new">Nuevo</span>
@@ -223,7 +265,8 @@
           <p style="margin-top:12px;color:#444">Ahora ofrecemos encuadernación con tapa dura y acabados especiales para tus proyectos más importantes.</p>
         </article>
 
-        <article class="news-card" aria-labelledby="n2">
+        <!-- Noticia 2 (con descuento declarado) -->
+        <article class="news-card" aria-labelledby="n2" data-cats="copias a color" data-discount="25">
           <div style="display:flex;justify-content:space-between;align-items:center">
             <h3 id="n2" style="margin:0;font-size:16px">Descuentos en Impresión a Color</h3>
             <span class="badge-new">Nuevo</span>
@@ -232,11 +275,72 @@
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
             <time datetime="2025-01-09">9 de enero de 2025</time>
           </div>
-          <p style="margin-top:12px;color:#444">Aprovecha nuestras ofertas especiales en impresión a color durante todo el mes.</p>
+          <p style="margin-top:12px;color:#444">Aprovechá hasta <strong>25%</strong> de descuento en impresiones a color en todos los formatos.</p>
+        </article>
+
+        <!-- Noticia 3 -->
+        <article class="news-card" aria-labelledby="n3" data-cats="envios">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 id="n3" style="margin:0;font-size:16px">Nuevo servicio de Envío Express</h3>
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+            <time datetime="2025-01-18">18 de enero de 2025</time>
+          </div>
+          <p style="margin-top:12px;color:#444">Cobertura en CABA y GBA con entrega en el día para pedidos confirmados antes de las 12hs.</p>
+        </article>
+
+        <!-- Noticia 4 -->
+        <article class="news-card" aria-labelledby="n4" data-cats="fotocopias">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 id="n4" style="margin:0;font-size:16px">Papel Reciclado Premium para Fotocopias</h3>
+            <span class="badge-new">Nuevo</span>
+          </div>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+            <time datetime="2025-01-16">16 de enero de 2025</time>
+          </div>
+          <p style="margin-top:12px;color:#444">Sumamos una línea eco-friendly con excelente opacidad y rendimiento.</p>
+        </article>
+
+        <!-- Promo 3 -->
+        <div class="promo" role="article" aria-label="Anillados 15% OFF"
+            data-discount="15" data-cats="anillados">
+          <div class="left">
+            <div style="display:flex;align-items:center;gap:8px;font-weight:700">💡 Especial Anillados</div>
+            <div style="font-weight:800;font-size:18px;margin-top:4px">15% de descuento en anillados</div>
+            <div style="color:#4b4b4b;margin-top:6px">Ideal para apuntes universitarios y manuales</div>
+            <div style="margin-top:6px;color:#b37b00">★★★★☆ &nbsp; Muy solicitado</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+              <time datetime="2025-01-12">12 de enero de 2025</time>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-end">
+            <a class="cta-mini" href="#promo-anillados">Ver detalle</a>
+            <div style="font-size:12px;color:#6b6b6b">Hasta agotar stock</div>
+          </div>
+        </div>
+
+        <!-- Noticia 5 -->
+        <article class="news-card" aria-labelledby="n5" data-cats="varias">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <h3 id="n5" style="margin:0;font-size:16px">Ampliamos horario de atención</h3>
+          </div>
+          <div style="color:var(--muted);font-size:13px;margin-top:8px;display:flex;gap:8px;align-items:center">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M8 7h8v8H8z" stroke-width="1.4"/></svg>
+            <time datetime="2025-01-07">7 de enero de 2025</time>
+          </div>
+          <p style="margin-top:12px;color:#444">Ahora abrimos de 8:30 a 19:00 hs para que tengas más tiempo de retirar tus pedidos.</p>
         </article>
       </div>
-    </section>
-
+    </div>
+     <!--botón Mostrar más -->
+    <div class="news-actions">
+      <button id="btn-news-more" class="btn outline small">Mostrar más</button>
+    </div>
+  </section>
     <!-- Productos -->
     <section class="wrap" aria-labelledby="productos-title">
       <h2 id="productos-title" class="section-title">Nuestros Productos y Servicios</h2>
@@ -251,9 +355,7 @@
 
       </div>
     </section>
-
-  </main>
-
+</main>
   <!-- Footer -->
   <footer>
     <div class="wrap footer-inner">
@@ -297,6 +399,7 @@
     <script src="js/api.js"></script>
     <script src="js/auth.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/noticias.js"></script>
     <script src="js/sidebar.js"></script>
 </body>
 </html>
