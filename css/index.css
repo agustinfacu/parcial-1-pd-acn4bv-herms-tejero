@@ -417,3 +417,11 @@ footer{
   opacity: .6;
   cursor: not-allowed;
 }
+/*  centrar botón mostrar mas de productos */
+.products-actions{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:12px;
+  text-align:center; 
+}

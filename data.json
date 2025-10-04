@@ -1,18 +1,208 @@
 {
   "productos": {
     "categorias": [
-      { "id": "todas", "label": "Todas" },
-      { "id": "encuadernados", "label": "Encuadernados" },
-      { "id": "anillados", "label": "Anillados" },
-      { "id": "apuntes", "label": "Apuntes" },
-      { "id": "libros", "label": "Libros" }
+      {
+        "id": "todas",
+        "label": "Todas"
+      },
+      {
+        "id": "encuadernados",
+        "label": "Encuadernados"
+      },
+      {
+        "id": "anillados",
+        "label": "Anillados"
+      },
+      {
+        "id": "apuntes",
+        "label": "Apuntes"
+      },
+      {
+        "id": "libros",
+        "label": "Libros"
+      }
     ],
     "servicios": [
-      { "id": 1, "nombre": "Impresión Simple Faz", "descripcion": "Copias en blanco y negro o color, cara simple", "precio": "Desde $50", "categoria": "apuntes", "imagen": "imagen_url" },
-      { "id": 2, "nombre": "Impresión Doble Faz", "descripcion": "Copias en ambas caras, ahorra papel", "precio": "Desde $75", "categoria": "apuntes", "imagen": "imagen_url" },
-      { "id": 3, "nombre": "Encuadernación Premium", "descripcion": "Encuadernado profesional con tapa dura", "precio": "Desde $300", "categoria": "encuadernados", "imagen": "imagen_url" },
-      { "id": 4, "nombre": "Anillado Espiral", "descripcion": "Anillado con espiral metálico o plástico", "precio": "Desde $150", "categoria": "anillados", "imagen": "imagen_url" },
-      { "id": 5, "nombre": "Libros Personalizados", "descripcion": "Impresión de libros con diseño personalizado", "precio": "Desde $500", "categoria": "libros", "imagen": "imagen_url" }
+      {
+        "id": 101,
+        "nombre": "Impresión Simple Faz B/N",
+        "alt": "Impresión simple faz en blanco y negro",
+        "descripcion": "Copias en blanco y negro, cara simple. Ideal para apuntes.",
+        "precio": "$50",
+        "categoria": "apuntes",
+        "imagen": "image/apuntes/simple-bn.jpg"
+      },
+      {
+        "id": 102,
+        "nombre": "Impresión Doble Faz B/N",
+        "alt": "Impresión doble faz en blanco y negro",
+        "descripcion": "Copias en ambas caras para ahorrar papel.",
+        "precio": "Desde $75",
+        "categoria": "apuntes",
+        "imagen": "image/apuntes/doble-bn.jpg"
+      },
+      {
+        "id": 103,
+        "nombre": "Impresión Simple Faz Color",
+        "alt": "Apuntes a color simple faz",
+        "descripcion": "Realce visual para diagramas e imágenes.",
+        "precio": "Desde $120",
+        "categoria": "apuntes",
+        "imagen": "image/apuntes/simple-color.jpg"
+      },
+      {
+        "id": 104,
+        "nombre": "Impresión Doble Faz Color",
+        "alt": "Apuntes a color doble faz",
+        "descripcion": "Calidad fotográfica en ambas caras.",
+        "precio": "Desde $160",
+        "categoria": "apuntes",
+        "imagen": "image/apuntes/doble-color.jpg"
+      },
+      {
+        "id": 105,
+        "nombre": "Apuntes A5 Económicos",
+        "alt": "Apuntes tamaño A5",
+        "descripcion": "Formato compacto para llevar a todos lados.",
+        "precio": "Desde $60",
+        "categoria": "apuntes",
+        "imagen": "image/apuntes/a5-economicos.jpg"
+      },
+      {
+        "id": 201,
+        "nombre": "Anillado Espiral Metálico",
+        "alt": "Anillado espiral metálico",
+        "descripcion": "Durabilidad y apertura 360°.",
+        "precio": "Desde $150",
+        "categoria": "anillados",
+        "imagen": "image/anillados/espiral-metalico.jpg"
+      },
+      {
+        "id": 202,
+        "nombre": "Anillado Espiral Plástico",
+        "alt": "Anillado espiral plástico",
+        "descripcion": "Ligero y económico para apuntes.",
+        "precio": "Desde $120",
+        "categoria": "anillados",
+        "imagen": "image/anillados/espiral-plastico.jpg"
+      },
+      {
+        "id": 203,
+        "nombre": "Anillado A4 50 hojas",
+        "alt": "Anillado A4 50 hojas",
+        "descripcion": "Opción ideal para resúmenes y prácticas.",
+        "precio": "$700",
+        "categoria": "anillados",
+        "imagen": "image/anillados/a4-50.jpg"
+      },
+      {
+        "id": 204,
+        "nombre": "Anillado A4 100 hojas",
+        "alt": "Anillado A4 100 hojas",
+        "descripcion": "Mayor capacidad sin perder comodidad.",
+        "precio": "$1100",
+        "categoria": "anillados",
+        "imagen": "image/anillados/a4-100.jpg"
+      },
+      {
+        "id": 205,
+        "nombre": "Anillado Carta 100 hojas",
+        "alt": "Anillado tamaño carta 100 hojas",
+        "descripcion": "Formato carta para manuales y guías.",
+        "precio": "$1050",
+        "categoria": "anillados",
+        "imagen": "image/anillados/carta-100.jpg"
+      },
+      {
+        "id": 301,
+        "nombre": "Encuadernación Premium Tapa Dura",
+        "alt": "Encuadernación tapa dura premium",
+        "descripcion": "Presentación profesional para tesis y trabajos finales.",
+        "precio": "Desde $4500",
+        "categoria": "encuadernados",
+        "imagen": "image/encuadernados/tapa-dura.jpg"
+      },
+      {
+        "id": 302,
+        "nombre": "Encuadernación Tapa Blanda",
+        "alt": "Encuadernación tapa blanda",
+        "descripcion": "Térmica de tapa blanda para proyectos y reportes.",
+        "precio": "Desde $2500",
+        "categoria": "encuadernados",
+        "imagen": "image/encuadernados/tapa-blanda.jpg"
+      },
+      {
+        "id": 303,
+        "nombre": "Encuadernación Rústica (Pegado)",
+        "alt": "Encuadernación rústica",
+        "descripcion": "Acabado tipo libro con pegado hot-melt.",
+        "precio": "Desde $3200",
+        "categoria": "encuadernados",
+        "imagen": "image/encuadernados/rustica.jpg"
+      },
+      {
+        "id": 304,
+        "nombre": "Encuadernación para Tesis",
+        "alt": "Encuadernado de tesis",
+        "descripcion": "Opciones universitarias / institucionales.",
+        "precio": "Desde $5200",
+        "categoria": "encuadernados",
+        "imagen": "image/encuadernados/tesis.jpg"
+      },
+      {
+        "id": 305,
+        "nombre": "Encuadernación Térmica",
+        "alt": "Encuadernación térmica",
+        "descripcion": "Acabado limpio y rápido con cubiertas transparentes.",
+        "precio": "Desde $2800",
+        "categoria": "encuadernados",
+        "imagen": "image/encuadernados/termica.jpg"
+      },
+      {
+        "id": 401,
+        "nombre": "Libros Personalizados",
+        "alt": "Libros personalizados",
+        "descripcion": "Diseño e impresión a medida para tu proyecto.",
+        "precio": "Desde $5000",
+        "categoria": "libros",
+        "imagen": "image/libros/personalizado.jpg"
+      },
+      {
+        "id": 402,
+        "nombre": "Novela Corta",
+        "alt": "Novela corta",
+        "descripcion": "Edición rústica para tiradas pequeñas.",
+        "precio": "Desde $4500",
+        "categoria": "libros",
+        "imagen": "image/libros/novela-corta.jpg"
+      },
+      {
+        "id": 403,
+        "nombre": "Fotolibro",
+        "alt": "Fotolibro de alta calidad",
+        "descripcion": "Papel premium para reproducción fotográfica.",
+        "precio": "Desde $6200",
+        "categoria": "libros",
+        "imagen": "image/libros/fotolibro.jpg"
+      },
+      {
+        "id": 404,
+        "nombre": "Manual Técnico",
+        "alt": "Manual técnico",
+        "descripcion": "Impresión duradera para uso intensivo.",
+        "precio": "Desde $3900",
+        "categoria": "libros",
+        "imagen": "image/libros/manual-tecnico.jpg"
+      },
+      {
+        "id": 405,
+        "nombre": "Cuaderno de Autor",
+        "alt": "Cuaderno de autor",
+        "descripcion": "Para proyectos personales y artbooks.",
+        "precio": "Desde $3500",
+        "categoria": "libros",
+        "imagen": "image/libros/cuaderno-autor.jpg"
+      }
     ]
   },
   "noticias": {
@@ -25,8 +215,22 @@
       "boton": "Obtener Descuento"
     },
     "articulos": [
-      { "id": 1, "titulo": "Nuevos Servicios de Encuadernación Premium", "resumen": "Ahora ofrecemos encuadernación con tapa dura y acabados especiales para tus proyectos más importantes.", "fecha": "2025-01-15", "categoria": "servicios", "es_reciente": true },
-      { "id": 2, "titulo": "Descuentos en Impresión a Color", "resumen": "Aprovecha nuestras ofertas especiales en impresión a color durante todo el mes.", "fecha": "2025-01-10", "categoria": "promociones", "es_reciente": true }
+      {
+        "id": 1,
+        "titulo": "Nuevos Servicios de Encuadernación Premium",
+        "resumen": "Ahora ofrecemos encuadernación con tapa dura y acabados especiales para tus proyectos más importantes.",
+        "fecha": "2025-01-15",
+        "categoria": "servicios",
+        "es_reciente": true
+      },
+      {
+        "id": 2,
+        "titulo": "Descuentos en Impresión a Color",
+        "resumen": "Aprovechá nuestras ofertas especiales en impresión a color durante todo el mes.",
+        "fecha": "2025-01-10",
+        "categoria": "promociones",
+        "es_reciente": true
+      }
     ]
   }
 }
