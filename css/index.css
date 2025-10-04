@@ -383,3 +383,37 @@ footer{
 /* Botón Mostrar más */
 .news-actions{ text-align:center; margin-top:12px; }
 .btn.small{ padding:10px 14px; font-size:14px; }
+
+/* util accesible para mensajes en vivo */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px,1px,1px,1px);
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  padding: 0 !important;
+}
+
+/* caja con scroll interno para los productos */
+.products-box {
+  max-height: 520px;      /* ajusta a tu layout */
+  overflow-y: auto;       /* scroll vertical interno */
+  padding-right: 4px;     /* espacio para el scroll */
+}
+
+/* botón mostrar más  */
+.btn-more {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  font-weight: 700;
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 6px 0 rgba(0,0,0,.06);
+}
+.btn-more:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
