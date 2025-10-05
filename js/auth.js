@@ -38,6 +38,6 @@ const AuthManager = {
   }
 };
 
-// Exponer de forma global para otros scripts que no usan módulos
+// Exponer de forma global 
 window.Usuario = Usuario;
 window.AuthManager = AuthManager;

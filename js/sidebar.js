@@ -6,7 +6,7 @@
 const btnToggle = document.getElementById("menu-toggle");
 const sidebar   = document.getElementById("sidebar");
 const btnClose  = document.getElementById("sidebar-close");
-const overlay   = document.getElementById("overlay"); // si no existe, queda undefined y no pasa nada
+const overlay   = document.getElementById("overlay"); 
 
 // --- Tabs (login/registro) ---
 const tabsContainer = document.querySelector(".tabs");
@@ -31,8 +31,8 @@ const btnGoogleRegister = document.getElementById("register-google");
 const setAria = (open) => {
   sidebar.setAttribute("aria-hidden", String(!open));
   btnToggle.setAttribute("aria-expanded", String(open));
-  if (overlay) overlay.hidden = !open;                  // mostrar/ocultar overlay si existe
-  document.body.classList.toggle("no-scroll", open);    // requiere regla CSS body.no-scroll
+  if (overlay) overlay.hidden = !open;                  
+  document.body.classList.toggle("no-scroll", open);    
 };
 
 const openMenu = () => {
@@ -47,7 +47,7 @@ const openMenu = () => {
 const closeMenu = () => {
   sidebar.classList.remove("active");
   setAria(false);
-  btnToggle?.focus(); // devolver foco al botón hamburguesa
+  btnToggle?.focus(); 
 };
 
 // ==============================
@@ -70,7 +70,6 @@ function activarTab(tipo) {
   panelLogin.classList.toggle("active", esLogin);
   panelRegister.classList.toggle("active", !esLogin);
 
-  // 🔧 También forzamos el display inline (evita quedarse en 'none')
   panelLogin.style.display    = esLogin ? "" : "none";
   panelRegister.style.display = esLogin ? "none" : "";
 
@@ -117,7 +116,7 @@ function refreshAuthUI() {
     // Sidebar: mostrar tabs y login por defecto; ocultar menú autenticado
     if (tabsContainer) {
       tabsContainer.removeAttribute("hidden");
-      tabsContainer.style.display = ""; // vuelve al valor por defecto (flex por tus estilos)
+      tabsContainer.style.display = ""; 
     }
 
     if (authMenu) {
