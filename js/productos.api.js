@@ -159,7 +159,7 @@ function filtrarServicios(filtro) {
   });
 }
 
-// ===== Tarjeta
+// ===== Tarjeta con selector de cantidad + / −
 function renderCard(prod) {
   const art = document.createElement("article");
   art.className = "product";
@@ -170,30 +170,61 @@ function renderCard(prod) {
   art.innerHTML = `
     <img src="${prod.imagen || ""}" alt="${escapeAttr(prod.alt || prod.nombre || "Producto")}">
     <div class="body">
-      <div style="display:flex;justify-content:space-between;align-items:start">
+      <div class="info-header">
         <div>
-          <h4 id="p-${prod.id ?? ""}" style="margin:0;font-size:16px;font-weight:700">
-            ${escapeHtml(prod.nombre ?? "Producto")}
-          </h4>
-          <div style="color:var(--muted);font-size:13px;margin-top:6px">
-            ${escapeHtml(prod.descripcion ?? "")}
-          </div>
+          <h4 id="p-${prod.id ?? ""}">${escapeHtml(prod.nombre ?? "Producto")}</h4>
+          <div class="descripcion">${escapeHtml(prod.descripcion ?? "")}</div>
         </div>
-        <div style="margin-left:8px">
+        <div class="price-container">
           <span class="price-pill">${escapeHtml(precioTxt)}</span>
         </div>
       </div>
-      <div class="actions" style="margin-top:6px">
-        <button class="btn-add" aria-label="Agregar ${escapeAttr(prod.nombre ?? "producto")}">Agregar</button>
+
+      <div class="actions">
+        <div class="qty-wrapper">
+          <button class="qty-btn" data-action="dec">−</button>
+          <input type="number" class="input-cant" value="1" min="1">
+          <button class="qty-btn" data-action="inc">+</button>
+        </div>
+
+        <button class="btn-add" aria-label="Agregar ${escapeAttr(prod.nombre ?? "producto")}">
+          Agregar
+        </button>
       </div>
     </div>
   `;
 
-  art.querySelector(".btn-add")?.addEventListener("click", () => {
-    const ok = confirm(`¿Agregar "${prod.nombre}" al carrito?`);
+  // --- Lógica cantidad
+  const inputCant = art.querySelector(".input-cant");
+  art.querySelectorAll(".qty-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      let val = parseInt(inputCant.value, 10) || 1;
+      if (btn.dataset.action === "inc") val++;
+      if (btn.dataset.action === "dec" && val > 1) val--;
+      inputCant.value = val;
+    });
+  });
+
+  // --- Lógica carrito
+  const btnAdd = art.querySelector(".btn-add");
+  btnAdd?.addEventListener("click", () => {
+    const cantidad = parseInt(inputCant.value, 10) || 1;
+    const ok = confirm(`¿Agregar ${cantidad} unidad(es) de "${prod.nombre}" al carrito?`);
     if (ok) {
       const items = JSON.parse(localStorage.getItem("carrito") || "[]");
-      items.push({ id: prod.id, nombre: prod.nombre, precio: prod.precio || 0 });
+
+      const existente = items.find(i => i.id === prod.id);
+      if (existente) {
+        existente.cantidad += cantidad;
+      } else {
+        items.push({
+          id: prod.id,
+          nombre: prod.nombre,
+          precio: prod.precio || 0,
+          cantidad
+        });
+      }
+
       localStorage.setItem("carrito", JSON.stringify(items));
       alert("Producto agregado ✅");
     }
@@ -201,6 +232,7 @@ function renderCard(prod) {
 
   return art;
 }
+
 
 // ===== Helpers
 function setActive(btn) {

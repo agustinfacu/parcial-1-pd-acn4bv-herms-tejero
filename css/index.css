@@ -951,3 +951,123 @@ footer {
   margin-top: 12px;
   text-align: center;
 }
+
+
+/* boton de carrito */
+/* === Estilos generales de la card === */
+.product {
+  border: 1px solid var(--brown-700, #ccc);
+  border-radius: var(--radius, 12px);
+  background: var(--card, #fff9f2);
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.product:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.product .body {
+  padding: 12px;
+}
+
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.info-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.info-header .descripcion {
+  color: var(--muted, #6b6b6b);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.price-container {
+  margin-left: 8px;
+}
+
+.price-pill {
+  background: var(--orange, #ff9a00);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 3px 8px;
+  font-size: 14px;
+}
+
+/* === Acciones === */
+.actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* === Selector de cantidad === */
+.qty-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--brown-700, #ccc);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card, #fff);
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.qty-btn {
+  padding: 4px 10px;
+  background: var(--card, #fff);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--brown-900, #333);
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background: var(--orange, #ff9a00);
+  color: white;
+}
+
+.input-cant {
+  width: 50px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--card, #fff);
+  color: var(--brown-900, #333);
+  outline: none;
+}
+
+/* === Botón Agregar === */
+.btn-add {
+  background: var(--orange, #ff9a00);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.btn-add:hover {
+  background: var(--orange-dark, #e07a00);
+}
