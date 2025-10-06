@@ -30,7 +30,7 @@
         "descripcion": "Copias en blanco y negro, cara simple. Ideal para apuntes.",
         "precio": "$50",
         "categoria": "apuntes",
-        "imagen": "image/apuntes/simple-bn.jpg"
+        "imagen": "./image/apuntes/categoria-apuntes.jpg"
       },
       {
         "id": 102,
@@ -39,7 +39,7 @@
         "descripcion": "Copias en ambas caras para ahorrar papel.",
         "precio": "Desde $75",
         "categoria": "apuntes",
-        "imagen": "image/apuntes/doble-bn.jpg"
+        "imagen": "image/apuntes/categoria-apuntes.jpg"
       },
       {
         "id": 103,
@@ -48,7 +48,7 @@
         "descripcion": "Realce visual para diagramas e imágenes.",
         "precio": "Desde $120",
         "categoria": "apuntes",
-        "imagen": "image/apuntes/simple-color.jpg"
+        "imagen": "image/apuntes/categoria-apuntes.jpg"
       },
       {
         "id": 104,
@@ -57,7 +57,7 @@
         "descripcion": "Calidad fotográfica en ambas caras.",
         "precio": "Desde $160",
         "categoria": "apuntes",
-        "imagen": "image/apuntes/doble-color.jpg"
+        "imagen": "image/apuntes/categoria-anillado.jpg"
       },
       {
         "id": 105,
@@ -66,7 +66,7 @@
         "descripcion": "Formato compacto para llevar a todos lados.",
         "precio": "Desde $60",
         "categoria": "apuntes",
-        "imagen": "image/apuntes/a5-economicos.jpg"
+        "imagen": "image/apuntes/categoria-anillado.jpg"
       },
       {
         "id": 201,
@@ -75,7 +75,7 @@
         "descripcion": "Durabilidad y apertura 360°.",
         "precio": "Desde $150",
         "categoria": "anillados",
-        "imagen": "image/anillados/espiral-metalico.jpg"
+        "imagen": "image/anillados/categoria-anillado.jpg"
       },
       {
         "id": 202,
@@ -84,7 +84,7 @@
         "descripcion": "Ligero y económico para apuntes.",
         "precio": "Desde $120",
         "categoria": "anillados",
-        "imagen": "image/anillados/espiral-plastico.jpg"
+        "imagen": "image/anillados/categoria-anillado.jpg"
       },
       {
         "id": 203,
@@ -93,7 +93,7 @@
         "descripcion": "Opción ideal para resúmenes y prácticas.",
         "precio": "$700",
         "categoria": "anillados",
-        "imagen": "image/anillados/a4-50.jpg"
+        "imagen": "image/anillados/categoria-anillado.jpg"
       },
       {
         "id": 204,
@@ -102,7 +102,7 @@
         "descripcion": "Mayor capacidad sin perder comodidad.",
         "precio": "$1100",
         "categoria": "anillados",
-        "imagen": "image/anillados/a4-100.jpg"
+        "imagen": "image/anillados/categoria-anillado.jpg"
       },
       {
         "id": 205,
@@ -111,7 +111,7 @@
         "descripcion": "Formato carta para manuales y guías.",
         "precio": "$1050",
         "categoria": "anillados",
-        "imagen": "image/anillados/carta-100.jpg"
+        "imagen": "image/anillados/categoria-anillado.jpg"
       },
       {
         "id": 301,
@@ -120,7 +120,7 @@
         "descripcion": "Presentación profesional para tesis y trabajos finales.",
         "precio": "Desde $4500",
         "categoria": "encuadernados",
-        "imagen": "image/encuadernados/tapa-dura.jpg"
+        "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
       {
         "id": 302,
@@ -129,7 +129,7 @@
         "descripcion": "Térmica de tapa blanda para proyectos y reportes.",
         "precio": "Desde $2500",
         "categoria": "encuadernados",
-        "imagen": "image/encuadernados/tapa-blanda.jpg"
+        "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
       {
         "id": 303,
@@ -138,7 +138,7 @@
         "descripcion": "Acabado tipo libro con pegado hot-melt.",
         "precio": "Desde $3200",
         "categoria": "encuadernados",
-        "imagen": "image/encuadernados/rustica.jpg"
+        "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
       {
         "id": 304,
@@ -147,7 +147,7 @@
         "descripcion": "Opciones universitarias / institucionales.",
         "precio": "Desde $5200",
         "categoria": "encuadernados",
-        "imagen": "image/encuadernados/tesis.jpg"
+        "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
       {
         "id": 305,
@@ -156,7 +156,7 @@
         "descripcion": "Acabado limpio y rápido con cubiertas transparentes.",
         "precio": "Desde $2800",
         "categoria": "encuadernados",
-        "imagen": "image/encuadernados/termica.jpg"
+        "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
       {
         "id": 401,
@@ -165,7 +165,7 @@
         "descripcion": "Diseño e impresión a medida para tu proyecto.",
         "precio": "Desde $5000",
         "categoria": "libros",
-        "imagen": "image/libros/personalizado.jpg"
+        "imagen": "image/libros/categoria-libros.jpg"
       },
       {
         "id": 402,
@@ -174,7 +174,7 @@
         "descripcion": "Edición rústica para tiradas pequeñas.",
         "precio": "Desde $4500",
         "categoria": "libros",
-        "imagen": "image/libros/novela-corta.jpg"
+        "imagen": "image/libros/categoria-libros.jpg"
       },
       {
         "id": 403,
@@ -183,7 +183,7 @@
         "descripcion": "Papel premium para reproducción fotográfica.",
         "precio": "Desde $6200",
         "categoria": "libros",
-        "imagen": "image/libros/fotolibro.jpg"
+        "imagen": "image/libros/categoria-libros.jpg"
       },
       {
         "id": 404,
@@ -192,7 +192,7 @@
         "descripcion": "Impresión duradera para uso intensivo.",
         "precio": "Desde $3900",
         "categoria": "libros",
-        "imagen": "image/libros/manual-tecnico.jpg"
+        "imagen": "image/libros/categoria-libros.jpg"
       },
       {
         "id": 405,
@@ -201,7 +201,7 @@
         "descripcion": "Para proyectos personales y artbooks.",
         "precio": "Desde $3500",
         "categoria": "libros",
-        "imagen": "image/libros/cuaderno-autor.jpg"
+        "imagen": "image/libros/categoria-libros.jpg"
       }
     ]
   },

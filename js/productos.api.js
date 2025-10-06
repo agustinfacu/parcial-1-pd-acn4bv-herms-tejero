@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 // ===== Fetch con timeout + fallback
 async function cargarDataConFallback() {
   try {
-    const dataRemota = await fetchConTimeout(API_URL, { timeout: 7000 });
+    const dataRemota = await fetchConTimeout(API_URL, { timeout: 15000 });
     if (!dataRemota.ok) throw new Error(`HTTP ${dataRemota.status}`);
     return await dataRemota.json();
   } catch (e) {
