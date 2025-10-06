@@ -5,7 +5,11 @@
 // paginado y "Mostrar más" (filas de 3 columnas).
 // ==========================================
 
-const API_URL = "https://jsonblob.com/api/jsonBlob/1424160473720479744";
+// URL API remota (JSONBlob) vieja: https://jsonblob.com/api/jsonBlob/1424160473720479744
+
+// se cambio la url por que la anterior dejo de funcionar
+const API_URL = "https://jsonblob.com/api/1420033092164444160";
+
 // Fallback local 
 const FALLBACK_URL = "./data.json";
 
