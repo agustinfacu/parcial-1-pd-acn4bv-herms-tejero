@@ -230,7 +230,10 @@ function renderCard(prod) {
       }
 
       localStorage.setItem("carrito", JSON.stringify(items));
-      alert("Producto agregado ✅");
+
+      renderCarrito();
+      
+      // alert("Producto agregado ✅");
     }
   });
 
