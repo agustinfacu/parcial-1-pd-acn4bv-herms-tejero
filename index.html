@@ -57,12 +57,34 @@
           <span id="user-chip-email">usuario@example.com</span>
         </div>
 
-        <!--Menu hamburguesa-->
-        <button class="hamburger" id="menu-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white">
-            <path d="M3 6h18M3 12h18M3 18h18" stroke-width="1.6" stroke-linecap="round" />
-          </svg>
-        </button>
+        <div class="header-actions">
+          <!-- Botón hamburguesa -->
+            <button class="hamburger" id="menu-cart" aria-expanded="false" aria-controls="cart-sidebar" aria-label="Abrir carrito">
+              🛒
+            </button>
+
+  
+          <!--Menu hamburguesa usuario-->
+          <button class="hamburger" id="menu-toggle" aria-expanded="false" aria-controls="sidebar" aria-label="Abrir menú">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white">
+              <path d="M3 6h18M3 12h18M3 18h18" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+
+
+        <!-- Menú lateral del carrito -->
+          <aside id="cart-sidebar" class="sidebar" aria-hidden="true">
+            <h2>🛒 Carrito de compras</h2>
+            <ul class="cart-items">
+              <li>Producto 1 - $1000</li>
+              <li>Producto 2 - $750</li>
+            </ul>
+            <div class="cart-footer">
+              <p>Total: <strong>$1750</strong></p>
+              <button class="checkout-btn">Finalizar compra</button>
+            </div>
+          </aside>
 
         <!-- Overlay para cerrar al click  -->
         <div id="overlay" class="overlay" hidden></div>
@@ -73,6 +95,8 @@
             <h2 id="sidebar-title">Tu cuenta</h2>
             <button id="sidebar-close" class="sidebar-close" aria-label="Cerrar menú">&times;</button>
           </div>
+
+    
 
           <!-- Tabs -->
           <div class="tabs" role="tablist" aria-label="Autenticación">
@@ -134,18 +158,6 @@
             <a href="#" class="menu-item" role="menuitem">Pagos y facturas</a>
             <a href="#" class="menu-item" role="menuitem">Mis Datos</a>
             <a href="#" class="menu-item" role="menuitem">Inicio</a>
-            <!-- Panel: Carrito -->
-              <div id="cart-panel" class="cart-panel" hidden>
-                <h3 class="cart-title">🛒 Tu carrito</h3>
-                <div id="cart-items" class="cart-items"></div>
-                <div class="cart-footer">
-                  <div class="cart-total">
-                    <span>Total:</span>
-                    <strong id="cart-total">$0</strong>
-                  </div>
-                  <button id="cart-clear" class="btn outline full">Vaciar carrito</button>
-                </div>
-              </div>
             <hr class="sep" />
             <button id="logout-btn" class="logout-btn" role="menuitem">Cerrar sesión</button>
           </nav>
@@ -163,6 +175,15 @@
         <p class="lead">
           Sube tu archivo, elige tus opciones y recibe tu trabajo impreso con la mejor calidad. Más de 1000 clientes satisfechos con nuestros servicios.
         </p>
+
+         <!-- Panel: Carrito -->
+          <div id="cart-panel" class="cart-panel">
+                <h3 class="cart-title">🛒 Tu carrito</h3>
+                <div id="cart-items" class="cart-items">
+                    <!-- aca van los productos / cantidad / precio  -->
+                </div>
+                <button id="cart-clear" class="btn outline full">Vaciar carrito</button>
+          </div>
 
         <div class="cta" role="group" aria-label="Acciones principales">
           <a class="btn" href="#productos">

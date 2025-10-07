@@ -8,7 +8,27 @@
 // URL API remota (JSONBlob) vieja: https://jsonblob.com/api/jsonBlob/1424160473720479744
 
 // se cambio la url por que la anterior dejo de funcionar
-const API_URL = "https://jsonblob.com/api/1420033092164444160";
+const API_URL = "https://jsonblob.com/api/jsonBlob/1425131267636256768";
+
+
+fetch(API_URL)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`Error HTTP: ${response.status}`);
+    }
+    return response.json(); // convierte la respuesta a JSON
+  })
+  .then(data => {
+    console.log("Datos recibidos:", data); // muestra el resultado
+    // Ejemplo: mostrar los primeros títulos
+    data.slice(0, 5).forEach(post => {
+      console.log(`📝 ${post.title}`);
+    });
+  })
+  .catch(error => {
+    console.error("Error al obtener datos:", error.message);
+  });
+  
 
 // Fallback local 
 const FALLBACK_URL = "./data.json";
@@ -52,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
+
 // ===== Fetch con timeout + fallback
 async function cargarDataConFallback() {
   try {
@@ -66,7 +87,7 @@ async function cargarDataConFallback() {
   }
 }
 
-function fetchConTimeout(url, { timeout = 7000, ...opts } = {}) {
+function fetchConTimeout(url, { timeout = 20000, ...opts } = {}) {
   const controller = new AbortController();
   const id = setTimeout(() => controller.abort(), timeout);
   return fetch(url, { ...opts, signal: controller.signal }).finally(() => clearTimeout(id));
