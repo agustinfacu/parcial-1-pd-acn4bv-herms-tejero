@@ -20,11 +20,12 @@ Para agregar imagenes de productos revisar el formato para el nombre de la image
 js (carpeta para los archivos javascript )
     auth.js (Este archivo JavaScript implementa la lógica básica de gestión de usuarios y autenticación local)
     noticias.js (controla la sección de Noticias y Promociones de la landing page, permitiendo al usuario ordenar, filtrar y paginar los elementos de forma dinámica)
-    productos.api.js (gestiona la carga y visualización dinámica del catálogo de productos y servicios de la imprenta. Su función principal es obtener los datos desde una API alojada en JSONBlob, con un sistema de fallback local al archivo data.json en caso de falla de conexión.)
+    productos.api.js (gestiona la carga y visualización dinámica del catálogo de productos y servicios de la imprenta. Su función principal es obtener los datos desde una API alojada en GITHUB, con un sistema de fallback local al archivo data.json en caso de falla de conexión.)
     sidebar.js (controla la interfaz lateral de autenticación (sidebar) de la landing page, gestionando tanto la apertura y cierre del menú como las pestañas de Inicio de sesión y Registro de usuario.)
 
 data.json (copia local del código de la API en JSON se usa si hay fallo en la conexión con jsonblob )
 index.html (Archivo HTML de la landing page)
+
 
 
 
