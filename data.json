@@ -37,7 +37,7 @@
         "nombre": "Impresión Doble Faz B/N",
         "alt": "Impresión doble faz en blanco y negro",
         "descripcion": "Copias en ambas caras para ahorrar papel.",
-        "precio": "Desde $75",
+        "precio": "$75",
         "categoria": "apuntes",
         "imagen": "image/apuntes/categoria-apuntes.jpg"
       },
@@ -46,7 +46,7 @@
         "nombre": "Impresión Simple Faz Color",
         "alt": "Apuntes a color simple faz",
         "descripcion": "Realce visual para diagramas e imágenes.",
-        "precio": "Desde $120",
+        "precio": "$120",
         "categoria": "apuntes",
         "imagen": "image/apuntes/categoria-apuntes.jpg"
       },
@@ -55,7 +55,7 @@
         "nombre": "Impresión Doble Faz Color",
         "alt": "Apuntes a color doble faz",
         "descripcion": "Calidad fotográfica en ambas caras.",
-        "precio": "Desde $160",
+        "precio": "$160",
         "categoria": "apuntes",
         "imagen": "image/apuntes/categoria-anillado.jpg"
       },
@@ -64,7 +64,7 @@
         "nombre": "Apuntes A5 Económicos",
         "alt": "Apuntes tamaño A5",
         "descripcion": "Formato compacto para llevar a todos lados.",
-        "precio": "Desde $60",
+        "precio": "$60",
         "categoria": "apuntes",
         "imagen": "image/apuntes/categoria-anillado.jpg"
       },
@@ -73,7 +73,7 @@
         "nombre": "Anillado Espiral Metálico",
         "alt": "Anillado espiral metálico",
         "descripcion": "Durabilidad y apertura 360°.",
-        "precio": "Desde $150",
+        "precio": "$150",
         "categoria": "anillados",
         "imagen": "image/anillados/categoria-anillado.jpg"
       },
@@ -82,7 +82,7 @@
         "nombre": "Anillado Espiral Plástico",
         "alt": "Anillado espiral plástico",
         "descripcion": "Ligero y económico para apuntes.",
-        "precio": "Desde $120",
+        "precio": "$120",
         "categoria": "anillados",
         "imagen": "image/anillados/categoria-anillado.jpg"
       },
@@ -118,7 +118,7 @@
         "nombre": "Encuadernación Premium Tapa Dura",
         "alt": "Encuadernación tapa dura premium",
         "descripcion": "Presentación profesional para tesis y trabajos finales.",
-        "precio": "Desde $4500",
+        "precio": "$4500",
         "categoria": "encuadernados",
         "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
@@ -127,7 +127,7 @@
         "nombre": "Encuadernación Tapa Blanda",
         "alt": "Encuadernación tapa blanda",
         "descripcion": "Térmica de tapa blanda para proyectos y reportes.",
-        "precio": "Desde $2500",
+        "precio": "$2500",
         "categoria": "encuadernados",
         "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
@@ -136,7 +136,7 @@
         "nombre": "Encuadernación Rústica (Pegado)",
         "alt": "Encuadernación rústica",
         "descripcion": "Acabado tipo libro con pegado hot-melt.",
-        "precio": "Desde $3200",
+        "precio": "$3200",
         "categoria": "encuadernados",
         "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
@@ -145,7 +145,7 @@
         "nombre": "Encuadernación para Tesis",
         "alt": "Encuadernado de tesis",
         "descripcion": "Opciones universitarias / institucionales.",
-        "precio": "Desde $5200",
+        "precio": "$5200",
         "categoria": "encuadernados",
         "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
@@ -154,7 +154,7 @@
         "nombre": "Encuadernación Térmica",
         "alt": "Encuadernación térmica",
         "descripcion": "Acabado limpio y rápido con cubiertas transparentes.",
-        "precio": "Desde $2800",
+        "precio": "$2800",
         "categoria": "encuadernados",
         "imagen": "image/encuadernados/categoria-encuadernado.jpg"
       },
@@ -163,7 +163,7 @@
         "nombre": "Libros Personalizados",
         "alt": "Libros personalizados",
         "descripcion": "Diseño e impresión a medida para tu proyecto.",
-        "precio": "Desde $5000",
+        "precio": "$5000",
         "categoria": "libros",
         "imagen": "image/libros/categoria-libros.jpg"
       },
@@ -172,7 +172,7 @@
         "nombre": "Novela Corta",
         "alt": "Novela corta",
         "descripcion": "Edición rústica para tiradas pequeñas.",
-        "precio": "Desde $4500",
+        "precio": "$4500",
         "categoria": "libros",
         "imagen": "image/libros/categoria-libros.jpg"
       },
@@ -181,7 +181,7 @@
         "nombre": "Fotolibro",
         "alt": "Fotolibro de alta calidad",
         "descripcion": "Papel premium para reproducción fotográfica.",
-        "precio": "Desde $6200",
+        "precio": "$6200",
         "categoria": "libros",
         "imagen": "image/libros/categoria-libros.jpg"
       },
@@ -190,7 +190,7 @@
         "nombre": "Manual Técnico",
         "alt": "Manual técnico",
         "descripcion": "Impresión duradera para uso intensivo.",
-        "precio": "Desde $3900",
+        "precio": "$3900",
         "categoria": "libros",
         "imagen": "image/libros/categoria-libros.jpg"
       },
@@ -199,7 +199,7 @@
         "nombre": "Cuaderno de Autor",
         "alt": "Cuaderno de autor",
         "descripcion": "Para proyectos personales y artbooks.",
-        "precio": "Desde $3500",
+        "precio": "$3500",
         "categoria": "libros",
         "imagen": "image/libros/categoria-libros.jpg"
       }

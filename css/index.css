@@ -1081,37 +1081,66 @@ footer {
 }
 
 
-
-/* ======================
-   Carrito sidebar
- */
-#cart-sidebar {
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 320px;
-  height: 100vh;
-  background: #2a2a2a;
-  transform: translateX(100%);
-  transition: transform 0.3s ease;
-  z-index: 1000;
+/* Panel del carrito */
+.cart-panel {
+  position: fixed;             /* Fijo en pantalla */
+  right: 20px;                 /* margen del lado derecho */
+  bottom: 20px;                /* margen inferior */
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;            /* scroll si hay muchos productos */
+  background: #fff9f2;         /* color suave de fondo */
+  border: 2px solid var(--orange, #ff9a00);
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  padding: 1rem;
+  z-index: 999;                /* encima de todo */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-#cart-sidebar.open {
-  transform: translateX(0);
+/* Título del carrito */
+.cart-title {
+  font-size: 1.2rem;
+  color: var(--brown-900, #6b2a00);
+  margin: 0;
+  text-align: center;
 }
 
-.overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.4);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 900;
+/* Contenedor de ítems */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: .95rem;
+  color: #333;
 }
 
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
+/* Cada ítem */
+.cart-items span {
+  display: block;
+  line-height: 1.4;
+}
+
+/* Botón de vaciar */
+.btn.outline.full {
+  background: transparent;
+  border: 2px solid var(--orange, #ff9a00);
+  color: var(--orange-dark, #e07a00);
+  font-weight: bold;
+  border-radius: 12px;
+  padding: .6rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn.outline.full:hover {
+  background: var(--orange, #ff9a00);
+  color: #fff;
+}
+
+.item-subtotal{
+  font-weight: bold;
+  color: var(--brown-900, #6b2a00);
 }

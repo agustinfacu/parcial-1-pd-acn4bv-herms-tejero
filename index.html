@@ -58,10 +58,11 @@
         </div>
 
         <div class="header-actions">
+          <!-- boton de carrito  -->
           <!-- Botón hamburguesa -->
-            <button class="hamburger" id="menu-cart" aria-expanded="false" aria-controls="cart-sidebar" aria-label="Abrir carrito">
+            <!-- <button class="hamburger" id="menu-cart" aria-expanded="false" aria-controls="cart-sidebar" aria-label="Abrir carrito">
               🛒
-            </button>
+            </button> -->
 
   
           <!--Menu hamburguesa usuario-->
@@ -71,20 +72,6 @@
             </svg>
           </button>
         </div>
-
-
-        <!-- Menú lateral del carrito -->
-          <aside id="cart-sidebar" class="sidebar" aria-hidden="true">
-            <h2>🛒 Carrito de compras</h2>
-            <ul class="cart-items">
-              <li>Producto 1 - $1000</li>
-              <li>Producto 2 - $750</li>
-            </ul>
-            <div class="cart-footer">
-              <p>Total: <strong>$1750</strong></p>
-              <button class="checkout-btn">Finalizar compra</button>
-            </div>
-          </aside>
 
         <!-- Overlay para cerrar al click  -->
         <div id="overlay" class="overlay" hidden></div>
@@ -164,11 +151,14 @@
 
         </aside>
       </div>
+
+      
     </header>
 
 
     <!-- HERO -->
     <main>
+      
       <section class="hero wrap" aria-labelledby="hero-title">
         <h2 id="hero-title">Impresión<br /><strong>Profesional</strong></h2>
         <h3>Al alcance de un clic</h3>
@@ -176,14 +166,8 @@
           Sube tu archivo, elige tus opciones y recibe tu trabajo impreso con la mejor calidad. Más de 1000 clientes satisfechos con nuestros servicios.
         </p>
 
-         <!-- Panel: Carrito -->
-          <div id="cart-panel" class="cart-panel">
-                <h3 class="cart-title">🛒 Tu carrito</h3>
-                <div id="cart-items" class="cart-items">
-                    <!-- aca van los productos / cantidad / precio  -->
-                </div>
-                <button id="cart-clear" class="btn outline full">Vaciar carrito</button>
-          </div>
+        
+       
 
         <div class="cta" role="group" aria-label="Acciones principales">
           <a class="btn" href="#productos">
@@ -232,6 +216,19 @@
             <div>Envíos a Domicilio</div>
           </div>
         </div>
+      </section>
+
+      <section class="cart">
+          <!-- Panel: Carrito -->
+          <div id="cart-panel" class="cart-panel">
+                <h3 class="cart-title">🛒 Tu carrito</h3>
+                <div id="cart-items" class="cart-items">
+                    <!-- aca van los productos / cantidad / precio  -->
+                </div>
+                <!-- aca muestro el total -->
+                <div class="cart-subtotal"></div>
+                <button id="cart-clear" class="btn outline full">Vaciar carrito</button>           
+          </div>
       </section>
 
       <!-- Noticias -->

@@ -11,31 +11,14 @@
 const API_URL = "https://jsonblob.com/api/jsonBlob/1425131267636256768";
 
 
-fetch(API_URL)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error(`Error HTTP: ${response.status}`);
-    }
-    return response.json(); // convierte la respuesta a JSON
-  })
-  .then(data => {
-    console.log("Datos recibidos:", data); // muestra el resultado
-    // Ejemplo: mostrar los primeros títulos
-    data.slice(0, 5).forEach(post => {
-      console.log(`📝 ${post.title}`);
-    });
-  })
-  .catch(error => {
-    console.error("Error al obtener datos:", error.message);
-  });
   
 
 // Fallback local 
 const FALLBACK_URL = "./data.json";
 
 // Estado
-const servicios = [];
-const categorias = [];
+const servicios = []; // array para guardar servicios  
+const categorias = []; // array para guardar categorias
 let categoriaActiva = "todas";
 let visibles = 0;
 let PAGE_SIZE = 6; // 2 filas x 3
