@@ -1,5 +1,5 @@
 json que estamos editando para generar la api:
-"https://jsonblob.com/api/jsonBlob/1424160473720479744"
+"https://raw.githubusercontent.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/refs/heads/api/remote.json"
 
 Proyecto: Web para La Montaña imprenta
 Link del repo github: https://github.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/tree/master
@@ -16,7 +16,7 @@ image (carpeta para las imágenes)
     libros —--------------> categoria-libros.jpg
 barra-de-menus.png
 icon.jpg
-Para agregar imagenes de productos revisar el formato para el nombre de la imagen segun API (https://jsonblob.com/1424160473720479744)
+Para agregar imagenes de productos revisar el formato para el nombre de la imagen segun API ([https://jsonblob.com/1424160473720479744](https://raw.githubusercontent.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/refs/heads/api/remote.json))
 js (carpeta para los archivos javascript )
     auth.js (Este archivo JavaScript implementa la lógica básica de gestión de usuarios y autenticación local)
     noticias.js (controla la sección de Noticias y Promociones de la landing page, permitiendo al usuario ordenar, filtrar y paginar los elementos de forma dinámica)
@@ -25,4 +25,6 @@ js (carpeta para los archivos javascript )
 
 data.json (copia local del código de la API en JSON se usa si hay fallo en la conexión con jsonblob )
 index.html (Archivo HTML de la landing page)
+
+
 
