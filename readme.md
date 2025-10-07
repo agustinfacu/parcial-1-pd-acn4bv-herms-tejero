@@ -1,5 +1,5 @@
 json que estamos editando para generar la api:
-"https://jsonblob.com/api/jsonBlob/1424160473720479744"
+"https://raw.githubusercontent.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/refs/heads/api/remote.json"
 
 Proyecto: Web para La Montaña imprenta
 Link del repo github: https://github.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/tree/master
@@ -25,4 +25,5 @@ js (carpeta para los archivos javascript )
 
 data.json (copia local del código de la API en JSON se usa si hay fallo en la conexión con jsonblob )
 index.html (Archivo HTML de la landing page)
+
 
