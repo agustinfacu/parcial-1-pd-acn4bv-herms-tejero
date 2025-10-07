@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     )
     .join("");
 
-    cartSubTotal.innerHTML = `<p><strong>Total: $${total.toFixed(2)}</strong></p>`;
+    cartSubTotal.innerHTML = `<p><strong>SubTotal: $${total.toFixed(2)}</strong></p>`;
 
 
     // tomo el boton de vaciar carrito
