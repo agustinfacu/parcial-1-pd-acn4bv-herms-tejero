@@ -22,7 +22,7 @@ function renderCarrito(){
   
       // en caso que el carrito este vacio. imprimo este mensaje 
       if (carrito.length === 0) {
-        cartItemsContainer.innerHTML = "<p>El carrito está vacío.</p>";
+        cartItemsContainer.innerHTML = "<p>🛍️ El carrito está vacío.</p>";
         cartSubTotal.innerHTML = `<p><strong>SubTotal: $${total.toFixed(2)}</strong></p>`
         return;
       }else{
@@ -59,7 +59,7 @@ function setupClearCart() {
         localStorage.removeItem("carrito"); // borra el contenido del localStorage
         total = 0; // reseteo el total
         renderCarrito(); // vuelvo a renderizar el carrito
-        cartItemsContainer.innerHTML = "<p>🛍️ El carrito está vacío.</p>";
+       // cartItemsContainer.innerHTML = "<p>🛍️ El carrito está vacío.</p>";
         console.log("Carrito vaciado.");
       }
     });

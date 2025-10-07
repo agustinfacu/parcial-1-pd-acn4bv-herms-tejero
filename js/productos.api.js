@@ -8,7 +8,7 @@
 // URL API remota (JSONBlob) vieja: https://jsonblob.com/api/jsonBlob/1424160473720479744
 
 // se cambio la url por que la anterior dejo de funcionar
-const API_URL = "https://jsonblob.com/api/jsonBlob/1425131267636256768";
+const API_URL = "https://raw.githubusercontent.com/agustinfacu/parcial-1-pd-acn4bv-herms-tejero/refs/heads/api/remote.json";
 
 
   
