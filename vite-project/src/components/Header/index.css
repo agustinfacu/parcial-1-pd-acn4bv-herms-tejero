@@ -1,0 +1,134 @@
+/* ======================
+   Header
+====================== */
+
+:root {
+  --brown-900: #6b2a00;
+  --brown-700: #9a4010;
+  --orange: #ff9a00;
+  --orange-dark: #e07a00;
+  --accent: #f6f0df;
+  --card: #fff9f2;
+  --muted: #6b6b6b;
+  --green: #10b981;
+  --radius: 14px;
+  --container: 1100px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+header {
+  width: 100%;
+  background: var(--brown-900);
+  color: #c0bdbd;
+  padding: 18px 0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.header-bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 18px;
+}
+.header-bar .brand {
+  justify-self: start;
+}
+.header-bar #user-chip {
+  justify-self: center;
+}
+.header-bar #menu-toggle {
+  justify-self: end;
+}
+
+.header-bar:has(#user-chip[hidden]),
+.header-bar.no-user {
+  grid-template-columns: 1fr auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand h1 {
+  margin: 0;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 18px;
+}
+.brand p {
+  margin: 0;
+  font-size: 13px;
+  opacity: .95;
+}
+
+.logo img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: "Montserrat";
+}
+
+.hamburger {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 8px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 12px;
+  transition: background .2s ease, box-shadow .2s ease, transform .06s ease;
+}
+.hamburger:hover {
+  background: rgba(255, 255, 255, .10);
+}
+.hamburger:active {
+  transform: scale(.98);
+}
+.hamburger:focus-visible {
+  outline: 2px solid #5d5b5b;
+  outline-offset: 2px;
+}
+
+.user-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 12px;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  align-self: center;
+}
+.user-chip .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #696969;
+  display: inline-block;
+}
+.user-chip .dot.online {
+  background: var(--green);
+}
