@@ -1,0 +1,27 @@
+
+.user-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 12px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 999px;
+  align-self: center;
+}
+.user-chip .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #999;
+  display: inline-block;
+}
+.user-chip .dot.online {
+  background: var(--green);
+}
