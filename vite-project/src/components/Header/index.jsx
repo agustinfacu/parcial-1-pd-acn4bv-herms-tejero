@@ -1,6 +1,4 @@
-import React from "react";
-import "./index.css"; 
-
+import React from 'react';
 function Header() {
   return (
     <header>
@@ -14,7 +12,7 @@ function Header() {
             <p>Servicios de Impresión Profesional</p>
           </div>
         </div>
-     
+      
         {/* Overlay para cerrar al click */}
         <div id="overlay" className="overlay" hidden></div>
 
