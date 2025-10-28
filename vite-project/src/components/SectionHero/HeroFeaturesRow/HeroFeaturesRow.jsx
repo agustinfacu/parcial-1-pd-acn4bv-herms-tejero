@@ -16,20 +16,13 @@
 
 import React from "react";
 import "./HeroFeaturesRow.css";
+import HeroFeature from "../HeroFeature/HeroFeature";
 
 const HeroFeaturesRow = ({ features = [] }) => {
   return (
     <div className="icons-row" role="list" aria-label="Características destacadas">
       {features.map(({ id, text, icon }) => (
-        <div key={id} className="feature" role="listitem">
-          {/* Ícono (SVG) */}
-          <span className="feature__icon" aria-hidden="true">
-            {icon}
-          </span>
-
-          {/* Texto descriptivo */}
-          <div className="feature__label">{text}</div>
-        </div>
+        <HeroFeature key={id} icon={icon} text={text} />
       ))}
     </div>
   );
