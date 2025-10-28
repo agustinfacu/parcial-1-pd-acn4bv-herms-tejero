@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
+import SectionNews from "./components/SectionNews/SectionNews"; // ✅ Import del componente news
 import "./App.css";
 
 function App() {
   return (
     <>
-    
-    {/* header / navbar */}
-      
+      {/* Header / Navbar */}
       <Header />
+
       {/* Hero Section */}
       <section id="inicio" className="hero">
         <div className="hero-content">
@@ -26,6 +26,9 @@ function App() {
           landing original.
         </p>
       </section>
+
+      {/* 📰 Noticias, Descuentos y Novedades */}
+      <SectionNews /> {/* ✅ Sección React completa con filtros, lista y botón */}
 
       {/* Footer */}
       <footer className="footer">
