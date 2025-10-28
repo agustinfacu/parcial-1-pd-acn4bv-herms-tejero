@@ -1,0 +1,98 @@
+[
+  {
+    "id": "promo-1",
+    "type": "promo",
+    "label": "⚡ Oferta Especial",
+    "headline": "¡20% de descuento en tu primer pedido!",
+    "description": "Válido para nuevos clientes en servicios de impresión",
+    "ratingText": "★★★★★ +1000 clientes satisfechos",
+    "dateISO": "2025-01-23",
+    "dateLabel": "23 de enero de 2025",
+    "discount": 20,
+    "categories": ["varias"],
+    "ctaText": "Obtener Descuento",
+    "ctaHref": "#descuento",
+    "note": "Oferta válida por tiempo limitado"
+  },
+  {
+    "id": "promo-2",
+    "type": "promo",
+    "label": "🎉 ¡Super Promo!",
+    "headline": "30% OFF en Copias a Color",
+    "description": "Aplica en tiradas desde 50 copias",
+    "ratingText": "★★★★★  Calidad fotográfica",
+    "dateISO": "2025-01-21",
+    "dateLabel": "21 de enero de 2025",
+    "discount": 30,
+    "categories": ["copias a color"],
+    "ctaText": "Aprovechar",
+    "ctaHref": "#descuento-color",
+    "note": "Válido todo el mes"
+  },
+  {
+    "id": "news-1",
+    "type": "news",
+    "title": "Nuevos Servicios de Encuadernación Premium",
+    "dateISO": "2025-01-14",
+    "dateLabel": "14 de enero de 2025",
+    "description": "Ahora ofrecemos encuadernación con tapa dura y acabados especiales para tus proyectos más importantes.",
+    "categories": ["encuadernados"],
+    "isNew": true
+  },
+  {
+    "id": "news-2",
+    "type": "news",
+    "title": "Descuentos en Impresión a Color",
+    "dateISO": "2025-01-09",
+    "dateLabel": "9 de enero de 2025",
+    "description": "Aprovechá hasta 25% de descuento en impresiones a color en todos los formatos.",
+    "categories": ["copias a color"],
+    "isNew": true,
+    "discount": 25
+  },
+  {
+    "id": "news-3",
+    "type": "news",
+    "title": "Nuevo servicio de Envío Express",
+    "dateISO": "2025-01-18",
+    "dateLabel": "18 de enero de 2025",
+    "description": "Cobertura en CABA y GBA con entrega en el día para pedidos confirmados antes de las 12hs.",
+    "categories": ["envios"],
+    "isNew": true
+  },
+  {
+    "id": "news-4",
+    "type": "news",
+    "title": "Papel Reciclado Premium para Fotocopias",
+    "dateISO": "2025-01-16",
+    "dateLabel": "16 de enero de 2025",
+    "description": "Sumamos una línea eco-friendly con excelente opacidad y rendimiento.",
+    "categories": ["fotocopias"],
+    "isNew": true
+  },
+  {
+    "id": "promo-3",
+    "type": "promo",
+    "label": "💡 Especial Anillados",
+    "headline": "15% de descuento en anillados",
+    "description": "Ideal para apuntes universitarios y manuales",
+    "ratingText": "★★★★☆  Muy solicitado",
+    "dateISO": "2025-01-12",
+    "dateLabel": "12 de enero de 2025",
+    "discount": 15,
+    "categories": ["anillados"],
+    "ctaText": "Ver detalle",
+    "ctaHref": "#promo-anillados",
+    "note": "Hasta agotar stock"
+  },
+  {
+    "id": "news-5",
+    "type": "news",
+    "title": "Ampliamos horario de atención",
+    "dateISO": "2025-01-07",
+    "dateLabel": "7 de enero de 2025",
+    "description": "Ahora abrimos de 8:30 a 19:00 hs para que tengas más tiempo de retirar tus pedidos.",
+    "categories": ["varias"],
+    "isNew": false
+  }
+]
