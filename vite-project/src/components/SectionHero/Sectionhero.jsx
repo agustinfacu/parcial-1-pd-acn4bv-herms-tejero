@@ -21,7 +21,7 @@ import "./SectionHero.css";
 
 // ⬇️ Subcomponentes 
 import HeroCTA from "./HeroCTA/HeroCTA";
-import HeroFeaturesRow from "./HeroFeaturesRow";
+import HeroFeaturesRow from "./HeroFeaturesRow/HeroFeaturesRow";
 
 // ============================================================================
 // Iconos SVG internos
