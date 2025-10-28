@@ -1,0 +1,63 @@
+/* ============================================================================
+   Estilos COMPARTIDOS del bloque SectionNews
+   Ubicación: src/components/SectionNews/SectionNews.css
+
+   Criterio:
+   - Aquí viven los estilos que SON USADOS por múltiples subcomponentes:
+       • .btn, .btn.outline, .btn.small  (usados por Action y otros)
+       • .news-box (envoltorio de la lista)
+       • .section-title (para mantenerlo modular en vez de global)
+============================================================================ */
+
+/* Título de sección (si decidís modularizarlo aquí) */
+.section-title {
+  font-family: "Montserrat";
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* Contenedor de noticias con scroll interno */
+.news-box {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid rgba(155, 64, 16, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(18, 18, 18, 0.03);
+  max-height: 640px;
+  overflow: auto;
+}
+
+/* ------------------------------
+   Botones compartidos (del css.txt)
+   Nota: mantenemos estos aquí porque los usan varios subcomponentes (Action,
+         y potencialmente otros en la sección).
+---------------------------------*/
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--orange);
+  color: #fff;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.06);
+}
+
+.btn.outline {
+  background: transparent;
+  color: var(--brown-900);
+  border: 2px solid rgba(155, 64, 16, 0.15);
+}
+
+.btn.small {
+  padding: 10px 14px;
+  font-size: 14px;
+}
