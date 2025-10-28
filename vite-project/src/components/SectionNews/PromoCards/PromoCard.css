@@ -1,0 +1,31 @@
+/* ============================================================================
+   Estilos originales para las tarjetas de promoción
+   Ubicación modular: src/components/SectionNews/PromoCard/PromoCard.css
+   Fuente: sección ".promo" del antiguo css.txt
+   Propósito: mantener diseño visual idéntico al HTML original.
+============================================================================ */
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff9e6, #fff4d8);
+  border: 1px solid rgba(155, 64, 16, .08);
+}
+
+.promo .left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.promo .cta-mini {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--brown-700);
+  color: #fff;
+  font-weight: 700;
+}
