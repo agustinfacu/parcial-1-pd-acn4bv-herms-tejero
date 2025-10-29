@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./components/Header";
 import SectionNews from "./components/SectionNews/SectionNews"; // ✅ Import del componente news
+import SectionHero from "./components/SectionHero/Sectionhero"; // ✅ Import del componente hero
+
 import "./App.css";
 
 function App() {
@@ -9,16 +11,10 @@ function App() {
       {/* Header / Navbar */}
       <Header />
 
-      {/* Hero Section */}
-      <section id="inicio" className="hero">
-        <div className="hero-content">
-          <h2>Bienvenido a mi sitio</h2>
-          <p>Este es el primer paso hacia la nueva versión en React 🚀</p>
-          <button className="btn-primary">Empezar</button>
-        </div>
-      </section>
+      {/* Hero Section (React, modularizado) */}
+      <SectionHero />   {/* ✅ usa tu componente real */}
 
-      {/* Sección Informativa */}
+      {/* Sección Informativa (puede quedar o moverla a otro componente) */}
       <section id="servicios" className="section">
         <h3>Nuestros Servicios</h3>
         <p>
@@ -28,7 +24,7 @@ function App() {
       </section>
 
       {/* 📰 Noticias, Descuentos y Novedades */}
-      <SectionNews /> {/* ✅ Sección React completa con filtros, lista y botón */}
+      <SectionNews />
 
       {/* Footer */}
       <footer className="footer">
@@ -37,5 +33,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;
