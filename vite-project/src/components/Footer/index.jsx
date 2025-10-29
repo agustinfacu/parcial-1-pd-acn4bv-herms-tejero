@@ -34,8 +34,7 @@ import FooterServices from "./FooterServices";  // ./FooterServices/index.jsx
 import FooterSocials from "./FooterSocials";    // ./FooterSocials/index.jsx
 
 // Datos de marca para el copy
-import { brandData } from "@/lib/footerData";
-
+import { brandData } from "/src/lib/footerData.js";
 // =============================================================================
 //  Render principal
 // =============================================================================

@@ -21,7 +21,7 @@
  */
 
 import React from "react";
-import { brandData } from "@/lib/footerData";
+import { brandData } from "/src/lib/footerData.js";
 import "./FooterBrand.css"; // ← Estilos específicos del bloque de marca
 
 // =============================================================================

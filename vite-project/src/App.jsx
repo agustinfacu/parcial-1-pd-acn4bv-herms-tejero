@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import SectionNews from "./components/SectionNews/SectionNews"; // ✅ Import del componente news
 import SectionHero from "./components/SectionHero/Sectionhero"; // ✅ Import del componente hero
+import Footer from "./components/Footer"; // ✅ importa el componente Footer
 
 import "./App.css";
 
@@ -26,13 +27,10 @@ function App() {
       {/* 📰 Noticias, Descuentos y Novedades */}
       <SectionNews />
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2025 Mi Proyecto. Todos los derechos reservados.</p>
-      </footer>
+      {/* Footer (modular, reutilizable en todas las vistas) */}
+      <Footer />
     </>
   );
 }
-
 
 export default App;

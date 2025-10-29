@@ -18,7 +18,7 @@
  */
 
 import React from "react";
-import { services } from "@/lib/footerData";
+import { services } from "/src/lib/footerData.js";
 import "./FooterServices.css"; // ← Estilos del bloque de servicios
 
 // =============================================================================

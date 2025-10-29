@@ -21,7 +21,7 @@
  */
 
 import React from "react";
-import { socialLinks } from "@/lib/footerData";
+import { socialLinks } from "/src/lib/footerData.js";
 import "./FooterSocials.css"; // ← Estilos específicos de la barra de redes
 
 // =============================================================================

@@ -19,7 +19,7 @@
  */
 
 import React from "react";
-import { contactData } from "@/lib/footerData";
+import { contactData } from "/src/lib/footerData.js";
 import "./FooterContact.css"; // ← Estilos del bloque de contacto
 
 // =============================================================================
