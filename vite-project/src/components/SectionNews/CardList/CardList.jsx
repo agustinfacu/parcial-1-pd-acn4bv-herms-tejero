@@ -77,7 +77,7 @@ const CardList = ({ items = [], visibleCount }) => {
         }
 
         // Por defecto, tratamos el item como "news"
-        return
+        return(
           <NewsCard
             key={key}
             title={item.title}
@@ -88,7 +88,7 @@ const CardList = ({ items = [], visibleCount }) => {
             categories={item.categories}
             discount={item.discount}
             idForTitle={item.idForTitle}
-          />;
+          />);
       })}
     </div>
   );

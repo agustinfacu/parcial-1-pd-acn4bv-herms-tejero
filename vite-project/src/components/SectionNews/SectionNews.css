@@ -61,3 +61,21 @@
   padding: 10px 14px;
   font-size: 14px;
 }
+/* ===== Normalización de color para la sección ===== */
+.news-box {
+  /* color base de textos dentro de la caja de noticias */
+  color: #222;
+}
+
+/* Asegurar títulos y textos negros por defecto dentro de items */
+.news-box .news-card,
+.news-box .promo {
+  color: #222;
+}
+
+/* Enlaces de botón deben seguir blancos (ya los tenés así) */
+.news-box .cta-mini,
+.news-box .btn {
+  color: #fff;
+}
+

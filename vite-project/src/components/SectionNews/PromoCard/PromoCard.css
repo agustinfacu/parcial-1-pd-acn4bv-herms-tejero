@@ -29,3 +29,26 @@
   color: #fff;
   font-weight: 700;
 }
+/* Título fuerte negro */
+.promo .left > div:nth-child(2),
+.promo-headline {
+  color: #222; /* por si usás la clase promo-headline */
+}
+
+/* Bajada/descripcion gris */
+.promo .left > div:nth-child(3),
+.promo-desc {
+  color: #4b4b4b; /* por si usás la clase promo-desc */
+}
+
+/* Claim/“rating” dorado tostado (como tu HTML) */
+.promo .left > div:nth-child(4),
+.promo-rating {
+  color: #b37b00;
+}
+
+/* Fecha (meta) en muted */
+.promo .left > div:nth-child(5),
+.promo-date {
+  color: var(--muted);
+}
